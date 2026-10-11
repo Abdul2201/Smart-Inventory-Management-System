@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    container_name: smart-inventory
+    ports:
+      - "5000:5000"
+    volumes:
+      - inventory-data:/data
+    restart: unless-stopped
+
+volumes:
+  inventory-data:
